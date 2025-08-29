@@ -1,0 +1,55 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Full-screen blurred background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('me.png') no-repeat center center / cover;
+  filter: blur(10px);
+  opacity: 0.5; /* Adjust opacity as needed */
+  z-index: -1; /* Keep behind content */
+}
+
+
+/* Main Section */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 0 5%;
+  position: relative;
+  z-index: 1; /* Keep content above blurred background */
+}
+
+.text-content {
+  max-width: 40%;
+  color: #000000;
+}
+
+.text-content h1 {
+  font-size: 48px;
+  margin: 0 0 10px 0;
+}
+
+.text-content p {
+  font-size: 18px;
+  color: #000000;
+}
+
+.image-content img {
+  width: 100%; /* Full width */
+  max-width: 600px; /* Optional max width */
+  border-radius: 10px;
+  z-index: 1;
+  position: relative;
+}
